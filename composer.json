@@ -74,6 +74,20 @@
         "symfony/polyfill-php72": "*"
     },
     "scripts": {
+        "go": [
+            "symfony server:start -d",
+            "symfony open:local"
+        ],
+        "boost": [
+            "symfony console doctrine:database:drop --if-exists --force",
+            "symfony console doctrine:database:create",
+            "symfony console doctrine:schema:update --force",
+            "symfony console doctrine:fixtures:load -n"
+        ],
+        "ciao": [
+            "symfony console cache:clear",
+            "symfony server:stop"
+        ],
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
