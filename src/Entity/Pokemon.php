@@ -4,12 +4,16 @@ namespace App\Entity;
 
 use App\Repository\PokemonRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Traits\Timestampable;
 
 /**
  * @ORM\Entity(repositoryClass=PokemonRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class Pokemon
 {
+
+    use Timestampable;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -46,12 +50,6 @@ class Pokemon
      * @ORM\Column(type="text", nullable=true)
      */
     private $details;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function getName(): ?string
     {
         return $this->name;
