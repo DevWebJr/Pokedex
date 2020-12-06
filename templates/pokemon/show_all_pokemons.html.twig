@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title 'Les Pokemons | ' ~ parent() %}
+
+{% block body %}
+    <div class="jumbotron border border-success mt-4 justify-content-between d-flex flex-wrap bg-dark">
+        {% for pokemon in pokemons %}
+            <div class="card mb-3 text-center bg-secondary border-success" style="max-width: 20rem;">
+                <div class="card-header">{{pokemon.name}}</div>
+                <div class="card-body">
+                    <img style="height:110px;width:100px;" src="{{ asset(pokemon.picture) }}" alt="image de {{pokemon.name}}">
+                </div>
+                <div class="card-footer">
+                    <a href="{{path('show_one_pokemon', {id:pokemon.id})}}" class=" text-success">
+                        en savoir plus
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

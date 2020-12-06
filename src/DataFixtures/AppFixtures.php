@@ -386,6 +386,7 @@ class AppFixtures extends Fixture
         $pokemon_01->setHeight(170);
         $pokemon_01->setWeight(27);
         $pokemon_01->setFamily($family_01);
+        $pokemon_01->setDetails("Ce piètre nageur se sert de sa queue pour appâter ses proies. Il les gobe si elles approchent de trop près.");
         $manager->persist($pokemon_01);
 
         $pokemon_02 = new Pokemon();
@@ -394,6 +395,7 @@ class AppFixtures extends Fixture
         $pokemon_02->setHeight(40);
         $pokemon_02->setWeight(4.2);
         $pokemon_02->setFamily($family_02);
+        $pokemon_02->setDetails("Posipi sert de supporter à ses partenaires. Chaque fois qu'un membre de son équipe fait une belle action dans un combat, ce Pokémon court-circuite son corps et libère des étincelles pour montrer sa joie.");
         $manager->persist($pokemon_02);
 
         $pokemon_03 = new Pokemon();
@@ -402,6 +404,7 @@ class AppFixtures extends Fixture
         $pokemon_03->setHeight(40);
         $pokemon_03->setWeight(4.2);
         $pokemon_03->setFamily($family_02);
+        $pokemon_03->setDetails("Négapi n'hésite pas à se mettre en danger pour soutenir ses partenaires. Il court-circuite son corps pour faire jaillir des gerbes d'étincelles et de donner du cœur à l'ouvrage à ses équipiers.");
         $manager->persist($pokemon_03);
 
         $pokemon_04 = new Pokemon();
@@ -410,6 +413,7 @@ class AppFixtures extends Fixture
         $pokemon_04->setHeight(170);
         $pokemon_04->setWeight(27);
         $pokemon_04->setFamily($family_03);
+        $pokemon_04->setDetails("En 3G, Deoxys prend cette forme sur Rubis et Saphir. Dans les jeux suivants, c'est sa forme de base, qu'il peut retrouver en interagissant avec une météorite.");
         $manager->persist($pokemon_04);
 
         $pokemon_05 = new Pokemon();
@@ -418,6 +422,7 @@ class AppFixtures extends Fixture
         $pokemon_05->setHeight(170);
         $pokemon_05->setWeight(27);
         $pokemon_05->setFamily($family_03);
+        $pokemon_05->setDetails("En 3G, Deoxys prend cette forme sur Rouge Feu. Dans les jeux suivants, il prend cette forme en interagissant avec une météorite.");
         $manager->persist($pokemon_05);
 
         $pokemon_06 = new Pokemon();
@@ -426,6 +431,7 @@ class AppFixtures extends Fixture
         $pokemon_06->setHeight(170);
         $pokemon_06->setWeight(27);
         $pokemon_06->setFamily($family_03);
+        $pokemon_06->setDetails("En 3G, Deoxys prend cette forme sur Vert Feuille. Dans les jeux suivants, il prend cette forme en interagissant avec une météorite.");
         $manager->persist($pokemon_06);
 
         $pokemon_07 = new Pokemon();
@@ -434,6 +440,7 @@ class AppFixtures extends Fixture
         $pokemon_07->setHeight(170);
         $pokemon_07->setWeight(27);
         $pokemon_07->setFamily($family_03);
+        $pokemon_07->setDetails("En 3G, Deoxys prend cette forme sur Émeraude. Dans les jeux suivants, il prend cette forme en interagissant avec une météorite.");
         $manager->persist($pokemon_07);
 
         $manager->flush();
