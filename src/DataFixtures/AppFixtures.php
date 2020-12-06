@@ -247,6 +247,22 @@ class AppFixtures extends Fixture
         $category_19->setCapacity($capacity_03);
         $manager->persist($category_19);
 
+        $category_20 = new category();
+        $category_20->setName('Vent');
+        $category_20->setDescription("Catégorie inventée par Souleyman.");
+        $category_20->setSymbol('images/category/Vent.jpg');
+        $category_20->setColor('#969eab');
+        $category_20->setCapacity($capacity_02);
+        $manager->persist($category_20);
+
+        $category_21 = new category();
+        $category_21->setName('Diamant');
+        $category_21->setDescription("Catégorie inventée par Souleyman.");
+        $category_21->setSymbol('images/category/Diamant.jpg');
+        $category_21->setColor('#08B2D4');
+        $category_21->setCapacity($capacity_02);
+        $manager->persist($category_21);
+
 
 
 
@@ -385,8 +401,8 @@ class AppFixtures extends Fixture
         $pokemon_01->setPicture('images/pokemons/Serpang.png');
         $pokemon_01->setHeight(170);
         $pokemon_01->setWeight(27);
-        $pokemon_01->setFamily($family_01);
         $pokemon_01->setDetails("Ce piètre nageur se sert de sa queue pour appâter ses proies. Il les gobe si elles approchent de trop près.");
+        $pokemon_01->setFamily($family_01);
         $manager->persist($pokemon_01);
 
         $pokemon_02 = new Pokemon();
@@ -394,8 +410,8 @@ class AppFixtures extends Fixture
         $pokemon_02->setPicture('images/pokemons/Posipi.png');
         $pokemon_02->setHeight(40);
         $pokemon_02->setWeight(4.2);
-        $pokemon_02->setFamily($family_02);
         $pokemon_02->setDetails("Posipi sert de supporter à ses partenaires. Chaque fois qu'un membre de son équipe fait une belle action dans un combat, ce Pokémon court-circuite son corps et libère des étincelles pour montrer sa joie.");
+        $pokemon_02->setFamily($family_02);
         $manager->persist($pokemon_02);
 
         $pokemon_03 = new Pokemon();
@@ -403,8 +419,8 @@ class AppFixtures extends Fixture
         $pokemon_03->setPicture('images/pokemons/Négapi.png');
         $pokemon_03->setHeight(40);
         $pokemon_03->setWeight(4.2);
-        $pokemon_03->setFamily($family_02);
         $pokemon_03->setDetails("Négapi n'hésite pas à se mettre en danger pour soutenir ses partenaires. Il court-circuite son corps pour faire jaillir des gerbes d'étincelles et de donner du cœur à l'ouvrage à ses équipiers.");
+        $pokemon_03->setFamily($family_02);
         $manager->persist($pokemon_03);
 
         $pokemon_04 = new Pokemon();
@@ -412,8 +428,8 @@ class AppFixtures extends Fixture
         $pokemon_04->setPicture('images/pokemons/Deoxys_(Forme_Normale).png');
         $pokemon_04->setHeight(170);
         $pokemon_04->setWeight(27);
-        $pokemon_04->setFamily($family_03);
         $pokemon_04->setDetails("En 3G, Deoxys prend cette forme sur Rubis et Saphir. Dans les jeux suivants, c'est sa forme de base, qu'il peut retrouver en interagissant avec une météorite.");
+        $pokemon_04->setFamily($family_03);
         $manager->persist($pokemon_04);
 
         $pokemon_05 = new Pokemon();
@@ -421,8 +437,8 @@ class AppFixtures extends Fixture
         $pokemon_05->setPicture('images/pokemons/Deoxys_(Forme_Attaque).png');
         $pokemon_05->setHeight(170);
         $pokemon_05->setWeight(27);
-        $pokemon_05->setFamily($family_03);
         $pokemon_05->setDetails("En 3G, Deoxys prend cette forme sur Rouge Feu. Dans les jeux suivants, il prend cette forme en interagissant avec une météorite.");
+        $pokemon_05->setFamily($family_03);
         $manager->persist($pokemon_05);
 
         $pokemon_06 = new Pokemon();
@@ -430,8 +446,8 @@ class AppFixtures extends Fixture
         $pokemon_06->setPicture('images/pokemons/Deoxys_(Forme_Défense).png');
         $pokemon_06->setHeight(170);
         $pokemon_06->setWeight(27);
-        $pokemon_06->setFamily($family_03);
         $pokemon_06->setDetails("En 3G, Deoxys prend cette forme sur Vert Feuille. Dans les jeux suivants, il prend cette forme en interagissant avec une météorite.");
+        $pokemon_06->setFamily($family_03);
         $manager->persist($pokemon_06);
 
         $pokemon_07 = new Pokemon();
@@ -439,8 +455,8 @@ class AppFixtures extends Fixture
         $pokemon_07->setPicture('images/pokemons/Deoxys_(Forme_Vitesse).png');
         $pokemon_07->setHeight(170);
         $pokemon_07->setWeight(27);
-        $pokemon_07->setFamily($family_03);
         $pokemon_07->setDetails("En 3G, Deoxys prend cette forme sur Émeraude. Dans les jeux suivants, il prend cette forme en interagissant avec une météorite.");
+        $pokemon_07->setFamily($family_03);
         $manager->persist($pokemon_07);
 
         $manager->flush();

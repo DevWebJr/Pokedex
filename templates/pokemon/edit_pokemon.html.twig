@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title 'Modifier un Pokémon | ' ~ parent() %}
+
+{% block body %}
+    <div class="jumbotron border border-success text-success mt-4 justify-content-center d-flex flex-wrap bg-dark">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h3>Modifier {{pokemon.name}}</h3>
+                {{ include('pokemon/_form.html.twig', {'submitButtonText':'Modifier'}) }}
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}

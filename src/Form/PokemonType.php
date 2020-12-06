@@ -16,7 +16,6 @@ class PokemonType extends AbstractType
             ->add('picture')
             ->add('height')
             ->add('weight')
-            ->add('family')
         ;
     }
 

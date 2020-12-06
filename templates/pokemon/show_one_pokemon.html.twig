@@ -1,6 +1,6 @@
 {% extends 'layouts/base.html.twig' %}
 
-{% block title pokemon.name ~ parent() %}
+{% block title pokemon.name ~ ' | ' ~ parent() %}
 
 {% block body %}
     <div class="jumbotron border border-success mt-4 justify-content-center d-flex flex-wrap bg-dark">
@@ -16,8 +16,24 @@
                 <p>{{pokemon.details}}</p>
             </div>
             <div class="card-footer">
-                <p>[ Famille : {{pokemon.family.name}} ]</p>
+                {% if pokemon.family is not null %}
+                    <p>[ Famille : {{pokemon.family.name}} ]</p>
+                {% else %}
+                    <p>[ Famille : non répertoriée ]</p>
+                {% endif %}
             </div>
         </div>
+        <article>
+            <h3 class="container-fluid d-flex flex-column">
+                <a class="btn btn-outline-warning mb-1 mt-auto" href=" {{path('edit_pokemon', {id: pokemon.id})}} ">Edit</a>
+                <a class="btn btn-outline-danger mb-auto mt-1" href="#" onclick="event.preventDefault(); confirm('Are you sure?') 
+                    && document.getElementById('js-pokemon-delete-form').submit();">Delete
+                </a>
+            </h3>
+            <form id="js-pokemon-delete-form" action="{{path('delete_pokemon', {id:pokemon.id})}}" method="POST" style="display: none;">
+                <input type="hidden" name="csrf_token" value="{{csrf_token('pokemon_deletion_' ~ pokemon.id)}}">
+                <input type="hidden" name="_method" value="DELETE">
+            </form>
+        </article>
     </div>
 {% endblock %}
